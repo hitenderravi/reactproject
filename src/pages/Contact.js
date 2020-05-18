@@ -5,31 +5,27 @@ import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
 import {graphql} from 'gatsby'
 import Infoblock from "../components/Reusable/Infoblock"
-import DualInfoblock from "../components/Reusable/DualInfoblock"
-import TeamPhotoSection from "../components/About/TeamPhotoSection"
-import BackgroundImage from 'gatsby-background-image'
-
-const About = ({data}) => (
+import Contactsupport from "../components/Contact/Contactsupport"
+const Contact = ({data}) => (
  
   <Layout>
     <SEO title="Home" />
    <HeroSection
   img={ data.img.childImageSharp.fluid}
-   title="About My Website"
+   title="Contact Us"
    subtitle=""
    heroclass="about-background"
    />
-   <DualInfoblock title="A Message from CEO"/>
 
-   <Infoblock heading="About Vision"/>
-   <TeamPhotoSection/>
+   <Infoblock heading="How can we help?"/>
+   <Contactsupport/>
   </Layout>
 
 )
 
 export const query = graphql`
 {
-  img: file(relativePath: { eq: "about.png" }) {
+  img: file(relativePath: { eq: "contact.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -40,4 +36,4 @@ export const query = graphql`
 `
 
 
-export default About
+export default Contact

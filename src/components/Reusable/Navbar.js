@@ -22,7 +22,7 @@ export default class Navbar extends Component {
         },{
             id:4,
             text:"Contact",
-            url:"/contact",
+            url:"/Contact",
         }]
     }
     myToggler=()=>{
